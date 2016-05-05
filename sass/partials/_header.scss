@@ -1,0 +1,18 @@
+//
+// Created: 2.5.2016
+// Author: LN
+// 
+
+
+HEADER {
+
+	@include background(url("../graphics/header_stripe.jpg") repeat-x center top);
+	background-size: contain;
+	text-align: center;
+	
+	IMG {
+		max-height: 350px;
+		vertical-align: middle;
+		max-width: 100%;
+	}
+}

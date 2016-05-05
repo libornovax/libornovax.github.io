@@ -1,0 +1,102 @@
+//
+// Created: 2.5.2016
+// Author: LN
+//
+
+// Width of the yellow stripe in the middle
+$stripe_width: 120px;
+
+FOOTER {
+	width: 100%;
+	background-color: $pink;
+	color: #FFF;
+	overflow: auto;
+
+	.icons {
+		background-color: $yellow;
+		width: $stripe_width;
+		height: 100px;
+		position: relative;
+		margin: auto;
+		white-space: nowrap;
+		padding-top: 35px;
+		padding-bottom: 30px;
+
+		// Hide the text on the sides when screen is too small
+		@media (max-width: 500px) {
+			.left, .right {
+				display: none;
+			}
+		}
+
+		.left {
+			position: absolute;
+			right: $stripe_width;
+			top: 0px;
+			text-align: right;
+			padding-right: 27px;
+			padding-top: 35px;
+
+			P {
+				padding: 8px 0 12px 0;
+			}
+		}
+
+		.right {
+			position: absolute;
+			left: $stripe_width;
+			top: 0px;
+			text-align: left;
+			padding-left: 27px;
+			padding-top: 35px;
+
+			P {
+				padding: 8px 0 13px 0;
+			}
+		}
+
+		.square {
+			display: table;
+			width: 100%;
+
+			> DIV {
+				display: table-row;
+
+				DIV {
+					display: table-cell;
+					width: 50%;
+					padding: 6px 8px;
+					vertical-align: middle;
+					position: relative;
+
+					IMG {
+						width: 25px;
+					}
+
+					#github {
+						width: 27px;
+					}
+
+					// Copyright notice
+					.copy {
+						@include transform(rotate(90deg));
+						position: absolute;
+						top: 25px;
+						right: -5px;
+						color: $pink;
+					}
+				}
+
+				DIV:first-child {
+					text-align: right;
+				}
+
+				DIV:last-child {
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+

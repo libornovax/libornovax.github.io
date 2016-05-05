@@ -1,0 +1,300 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+@font-face {
+  font-family: 'MyRaleway';
+  font-style: normal;
+  font-weight: 200;
+  src: local("Raleway Extra Light"), local("Raleway-ExtraLight"), url("../fonts/Raleway-ExtraLight.ttf"); }
+@font-face {
+  font-family: 'MyRaleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Raleway Regular"), local("Raleway-Regular"), url("../fonts/Raleway-Regular.ttf"); }
+@font-face {
+  font-family: 'MyRaleway';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url("../fonts/Raleway-SemiBold.ttf"); }
+BODY {
+  text-align: center;
+  font-family: "MyRaleway", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.3em; }
+
+A {
+  color: inherit;
+  text-decoration: none; }
+
+HEADER {
+  background: url("../graphics/header_stripe.jpg") repeat-x center top;
+  background-size: contain;
+  text-align: center; }
+  HEADER IMG {
+    max-height: 350px;
+    vertical-align: middle;
+    max-width: 100%; }
+
+FOOTER {
+  width: 100%;
+  background-color: #fd1682;
+  color: #FFF;
+  overflow: auto; }
+  FOOTER .icons {
+    background-color: #e7ff05;
+    width: 120px;
+    height: 100px;
+    position: relative;
+    margin: auto;
+    white-space: nowrap;
+    padding-top: 35px;
+    padding-bottom: 30px; }
+    @media (max-width: 500px) {
+      FOOTER .icons .left, FOOTER .icons .right {
+        display: none; } }
+    FOOTER .icons .left {
+      position: absolute;
+      right: 120px;
+      top: 0px;
+      text-align: right;
+      padding-right: 27px;
+      padding-top: 35px; }
+      FOOTER .icons .left P {
+        padding: 8px 0 12px 0; }
+    FOOTER .icons .right {
+      position: absolute;
+      left: 120px;
+      top: 0px;
+      text-align: left;
+      padding-left: 27px;
+      padding-top: 35px; }
+      FOOTER .icons .right P {
+        padding: 8px 0 13px 0; }
+    FOOTER .icons .square {
+      display: table;
+      width: 100%; }
+      FOOTER .icons .square > DIV {
+        display: table-row; }
+        FOOTER .icons .square > DIV DIV {
+          display: table-cell;
+          width: 50%;
+          padding: 6px 8px;
+          vertical-align: middle;
+          position: relative; }
+          FOOTER .icons .square > DIV DIV IMG {
+            width: 25px; }
+          FOOTER .icons .square > DIV DIV #github {
+            width: 27px; }
+          FOOTER .icons .square > DIV DIV .copy {
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+            position: absolute;
+            top: 25px;
+            right: -5px;
+            color: #fd1682; }
+        FOOTER .icons .square > DIV DIV:first-child {
+          text-align: right; }
+        FOOTER .icons .square > DIV DIV:last-child {
+          text-align: left; }
+
+SECTION {
+  overflow: auto; }
+
+H1 {
+  line-height: 1.3em;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 190%;
+  font-weight: 400;
+  padding: 70px 10% 15px 10%; }
+
+H2 {
+  color: #fd1682;
+  font-weight: 600;
+  padding-bottom: 8px;
+  padding-top: 25px; }
+
+#head-main H1 {
+  color: #fd1682;
+  font-size: 200%;
+  padding: 55px 10% 0px 10%;
+  margin: auto;
+  display: inline-block; }
+  #head-main H1 STRONG {
+    font-weight: 600; }
+@media (min-width: 360px) {
+  #head-main H1 {
+    border-bottom: 5px solid #fd1682;
+    padding: 55px 65px 15px 65px; } }
+#head-main P {
+  text-align: center;
+  margin: 25px auto 30px auto;
+  width: 80%;
+  max-width: 650px; }
+
+#studies {
+  padding-bottom: 20px; }
+  #studies > DIV {
+    display: table;
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto 60px auto; }
+    #studies > DIV DIV {
+      display: table-cell;
+      vertical-align: middle; }
+    #studies > DIV DIV:first-child {
+      width: 32%;
+      text-align: right; }
+      #studies > DIV DIV:first-child IMG {
+        width: 100%;
+        max-width: 150px; }
+    #studies > DIV DIV:last-child {
+      width: 68%;
+      text-align: left;
+      padding-left: 9%; }
+      #studies > DIV DIV:last-child STRONG {
+        font-weight: 400; }
+      #studies > DIV DIV:last-child H2 {
+        padding-top: 0; }
+
+#what-can-i-do {
+  background-color: #e7ff05; }
+  #what-can-i-do H2, #what-can-i-do P {
+    width: 80%;
+    margin: auto; }
+  #what-can-i-do .software-logos {
+    display: table;
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto 70px auto; }
+    #what-can-i-do .software-logos DIV {
+      display: table-cell;
+      width: 33.3%;
+      vertical-align: middle;
+      padding: 10px; }
+      @media (min-width: 460px) {
+        #what-can-i-do .software-logos DIV IMG {
+          max-width: 110px;
+          max-height: 67px; } }
+      @media (min-width: 550px) {
+        #what-can-i-do .software-logos DIV IMG {
+          max-width: 130px;
+          max-height: 80px; } }
+      @media (max-width: 460px) {
+        #what-can-i-do .software-logos DIV IMG {
+          max-width: 80px;
+          max-height: 50px; } }
+    #what-can-i-do .software-logos DIV:first-child {
+      text-align: left; }
+    #what-can-i-do .software-logos DIV:last-child {
+      text-align: right; }
+
+#experience H2 {
+  color: #000; }
+#experience STRONG {
+  font-weight: 400;
+  color: #fd1682; }
+#experience .current {
+  display: table;
+  width: 80%;
+  max-width: 600px;
+  margin: 30px auto 15px auto; }
+  #experience .current DIV {
+    display: table-cell;
+    vertical-align: middle; }
+  #experience .current DIV:first-child {
+    width: 5%;
+    text-align: right; }
+  #experience .current DIV:last-child {
+    width: 5%;
+    text-align: left; }
+  #experience .current IMG {
+    max-height: 50px; }
+  #experience .current H2 {
+    padding-top: 0; }
+@media (max-width: 460px) {
+  #experience .current DIV:first-child, #experience .current DIV:last-child {
+    display: none; } }
+#experience .positions {
+  display: table;
+  margin: 15px auto 40px auto;
+  width: 80%;
+  max-width: 800px; }
+  #experience .positions > DIV DIV {
+    padding: 15px 10px; }
+  @media (min-width: 640px) {
+    #experience .positions > DIV {
+      display: table-row; }
+      #experience .positions > DIV DIV {
+        display: table-cell; } }
+@media (max-width: 550px) {
+  #experience .positions {
+    margin-bottom: 80px; }
+  #experience .logos {
+    display: none; } }
+@media (min-width: 550px) {
+  #experience .logos {
+    display: table;
+    max-width: 800px;
+    width: 80%;
+    margin: 0 auto 80px auto; }
+    #experience .logos DIV {
+      vertical-align: middle;
+      padding: 10px;
+      display: table-cell;
+      width: 25%; } }
+    @media (min-width: 550px) and (max-width: 680px) {
+      #experience .logos DIV IMG {
+        max-width: 100px;
+        max-height: 75px; } }
+    @media (min-width: 550px) and (min-width: 680px) {
+      #experience .logos DIV IMG {
+        max-width: 120px;
+        max-height: 90px; } }
