@@ -237,13 +237,14 @@ H2 {
       text-align: right; }
 
 #portfolio {
-  overflow: initial; }
+  overflow: initial;
+  margin-bottom: 30px; }
   #portfolio > DIV {
     display: table;
     border-spacing: 5px;
     width: 80%;
     max-width: 800px;
-    margin: auto; }
+    margin: 30px auto 0 auto; }
     #portfolio > DIV > DIV {
       display: table-row; }
       #portfolio > DIV > DIV > DIV {

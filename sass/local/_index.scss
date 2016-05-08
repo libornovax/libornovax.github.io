@@ -161,13 +161,14 @@ H2 {
 
 #portfolio {
 	overflow: initial;
+	margin-bottom: 30px;
 
 	> DIV {
 		display: table;
 		border-spacing: 5px;
 		width: 80%;
 		max-width: 800px;
-		margin: auto;
+		margin: 30px auto 0 auto;
 
 		> DIV {
 			display: table-row;
