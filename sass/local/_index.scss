@@ -159,6 +159,82 @@ H2 {
 }
 
 
+#portfolio {
+	overflow: initial;
+
+	> DIV {
+		display: table;
+		border-spacing: 5px;
+		width: 80%;
+		max-width: 800px;
+		margin: auto;
+
+		> DIV {
+			display: table-row;
+
+			> DIV {
+				// Table cell
+				display: table-cell;
+				width: 33.3333%;
+
+				// Flipping code largely inspired by https://davidwalsh.name/css-flip
+				// Perspective rotation while flipping the images
+				@include perspective(1000px);
+
+
+				.flipper {
+					@include transition-duration(0.6s);
+					@include transform-style(preserve-3d);
+					position: relative;
+
+					.front, .back {
+						@include backface-visibility(hidden);
+
+						IMG {
+							width: 100%;
+							display: block;
+						}
+					}
+
+					.front {
+						// We want the front to be relative because the image it contains sets the height of the element
+						position: relative;
+						z-index: 2;
+						@include transform(rotateY(0deg));
+					}
+
+					.back {
+						// The back needs to be positioned absolutely so it would not jump below the front div
+						position: absolute;
+						top: 0;
+						left: 0;
+						bottom: 0;
+						right: 0;
+						@include transform(rotateY(-180deg));
+					}
+				}
+			}
+
+			> DIV.flipped .flipper {
+				// This is to perform the flipping of the card
+				@include transform(rotateY(180deg));
+
+			}
+
+			.text-tile {
+				vertical-align: middle;
+				background-color: $pink;
+
+				H1 {
+					color: #FFF;
+					padding: 0 5%;
+				}
+			}
+		}
+	}
+}
+
+
 // My work experience
 #experience {
 
