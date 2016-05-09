@@ -36,6 +36,8 @@ function timeout(cards, i) {
     setTimeout(function () {
         var card = document.getElementById(cards[i]);
 		card.classList.toggle('flipped');
+		var card_narrow = document.getElementById('n' + cards[i]);
+		card_narrow.classList.toggle('flipped');
 
         // create a recursive loop
         timeout(cards, i+1);
