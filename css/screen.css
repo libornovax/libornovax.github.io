@@ -65,7 +65,9 @@ BODY {
   font-family: "MyRaleway", "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   font-weight: 200;
-  line-height: 1.3em; }
+  line-height: 1.3em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 A {
   color: inherit;
@@ -98,6 +100,7 @@ FOOTER {
       FOOTER .icons .left, FOOTER .icons .right {
         display: none; } }
     FOOTER .icons .left {
+      font-weight: 400;
       position: absolute;
       right: 120px;
       top: 0px;
@@ -107,6 +110,7 @@ FOOTER {
       FOOTER .icons .left P {
         padding: 8px 0 12px 0; }
     FOOTER .icons .right {
+      font-weight: 400;
       position: absolute;
       left: 120px;
       top: 0px;
@@ -241,7 +245,6 @@ H2 {
   margin-bottom: 30px; }
   #portfolio > DIV {
     display: table;
-    border-spacing: 5px;
     width: 80%;
     max-width: 800px;
     margin: 30px auto 0 auto; }
@@ -309,6 +312,14 @@ H2 {
         @media (max-width: 500px) {
           #portfolio > DIV > DIV .text-tile H1 {
             font-size: 120%; } }
+      #portfolio > DIV > DIV .text-tile.fun {
+        background-color: #fd1682; }
+        #portfolio > DIV > DIV .text-tile.fun H1 {
+          color: #FFF; }
+      #portfolio > DIV > DIV .text-tile.serious {
+        background-color: #e7ff05; }
+        #portfolio > DIV > DIV .text-tile.serious H1 {
+          color: #fd1682; }
 
 #experience H2 {
   color: #000; }

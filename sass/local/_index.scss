@@ -165,7 +165,7 @@ H2 {
 
 	> DIV {
 		display: table;
-		border-spacing: 5px;
+		// border-spacing: 5px;
 		width: 80%;
 		max-width: 800px;
 		margin: 30px auto 0 auto;
@@ -184,7 +184,7 @@ H2 {
 			.narrow {
 				display: none;
 			}
-			
+
 			.wide > DIV {
 				width: 33.3333%;
 			}
@@ -254,6 +254,22 @@ H2 {
 					H1 {
 						font-size: 120%;
 					}
+				}
+			}
+
+			.text-tile.fun {
+				background-color: $pink;
+
+				H1 {
+					color: #FFF;
+				}
+			}
+
+			.text-tile.serious {
+				background-color: $yellow;
+
+				H1 {
+					color: $pink;
 				}
 			}
 		}
