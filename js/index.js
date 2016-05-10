@@ -34,10 +34,15 @@ function timeout(cards, i) {
 	}
 
     setTimeout(function () {
-        var card = document.getElementById(cards[i]);
-		card.classList.toggle('flipped');
-		var card_narrow = document.getElementById('n' + cards[i]);
-		card_narrow.classList.toggle('flipped');
+        var card = $('#' + cards[i]);
+		var card_narrow = $('#n' + cards[i]);
+
+        // If the element has hover on it, we do not want to flip it
+        if (!card.hasClass('hovered') && !card_narrow.hasClass('hovered'))
+        {
+			card.toggleClass('flipped');
+			card_narrow.toggleClass('flipped');
+		}
 
         // create a recursive loop
         timeout(cards, i+1);
@@ -45,11 +50,38 @@ function timeout(cards, i) {
 }
 
 
-window.onload = function () {
+$(document).ready(function () {
+
+	// ------------------------  HANDLE THE TILE DESCRIPTION  ------------------------ //
+	// On mouseover on the tile show the description
+	$('.tile').on('mouseover', function () {
+		// Forbid the flipping
+		$(this).addClass('hovered');
+
+		var tile = $(this).children('.tile-desc');
+
+		tile.css('display', 'table'); // Display table because of the vertical align
+		tile.width($(this).width());
+		tile.height($(this).height());
+
+	});
+
+	// On mouse out of the description hide the description
+	$('.tile-desc').on('mouseout', function () {
+		// Allow flipping again
+		$(this).parent().removeClass('hovered');
+
+		// Hide the description
+		$(this).css('display', 'none');
+	});
+
+
+	// -------------------------  HANDLE THE TILE FLIPPING  ------------------------- //
 	// Start randomly flipping cards
 	// I will do this in a very simple way
 	var cards = ['c0', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6'];
 
 	shuffle(cards);
 	timeout(cards, 0);
-};
+});
+
