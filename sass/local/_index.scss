@@ -170,26 +170,6 @@ H2 {
 		max-width: 800px;
 		margin: 30px auto 0 auto;
 
-		// Handle the switch between the wide and narrow table
-		@media (max-width: 750px) {
-			.wide {
-				display: none;
-			}
-
-			.narrow > DIV {
-				width: 50%;
-			}
-		}
-		@media (min-width: 750px) {
-			.narrow {
-				display: none;
-			}
-
-			.wide > DIV {
-				width: 33.3333%;
-			}
-		}
-
 		> DIV {
 			display: table-row;
 
@@ -273,9 +253,9 @@ H2 {
 					padding: 0 5%;
 				}
 
-				@media (max-width: 500px) {
+				@media (max-width: 450px) {
 					H1 {
-						font-size: 120%;
+						padding: 30px 5%;
 					}
 				}
 			}
@@ -284,7 +264,7 @@ H2 {
 				background-color: $pink;
 
 				H1 {
-					color: #FFF;
+					color: $yellow;
 				}
 			}
 

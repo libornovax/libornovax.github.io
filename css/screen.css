@@ -249,16 +249,6 @@ H2 {
     width: 80%;
     max-width: 800px;
     margin: 30px auto 0 auto; }
-    @media (max-width: 750px) {
-      #portfolio > DIV .wide {
-        display: none; }
-      #portfolio > DIV .narrow > DIV {
-        width: 50%; } }
-    @media (min-width: 750px) {
-      #portfolio > DIV .narrow {
-        display: none; }
-      #portfolio > DIV .wide > DIV {
-        width: 33.3333%; } }
     #portfolio > DIV > DIV {
       display: table-row; }
       #portfolio > DIV > DIV > DIV {
@@ -323,13 +313,13 @@ H2 {
         #portfolio > DIV > DIV .text-tile H1 {
           color: #FFF;
           padding: 0 5%; }
-        @media (max-width: 500px) {
+        @media (max-width: 450px) {
           #portfolio > DIV > DIV .text-tile H1 {
-            font-size: 120%; } }
+            padding: 30px 5%; } }
       #portfolio > DIV > DIV .text-tile.fun {
         background-color: #fd1682; }
         #portfolio > DIV > DIV .text-tile.fun H1 {
-          color: #FFF; }
+          color: #e7ff05; }
       #portfolio > DIV > DIV .text-tile.serious {
         background-color: #e7ff05; }
         #portfolio > DIV > DIV .text-tile.serious H1 {
