@@ -170,26 +170,6 @@ H2 {
 		max-width: 800px;
 		margin: 30px auto 0 auto;
 
-		// Handle the switch between the wide and narrow table
-		@media (max-width: 750px) {
-			.wide {
-				display: none;
-			}
-
-			.narrow > DIV {
-				width: 50%;
-			}
-		}
-		@media (min-width: 750px) {
-			.narrow {
-				display: none;
-			}
-
-			.wide > DIV {
-				width: 33.3333%;
-			}
-		}
-
 		> DIV {
 			display: table-row;
 
@@ -226,11 +206,34 @@ H2 {
 					.back {
 						// The back needs to be positioned absolutely so it would not jump below the front div
 						position: absolute;
+						display: table;
+						border-spacing: 0;
 						top: 0;
 						left: 0;
-						bottom: 0;
-						right: 0;
 						@include transform(rotateY(-180deg));
+
+						> DIV {
+							display: table-cell;
+							vertical-align: middle;
+							padding: 0 10%;
+
+							H2 {
+								padding-top: 0;
+							}
+						}
+
+						DIV.fun {
+							background-color: $pink;
+							color: #FFF;
+
+							H2 {
+								color: $yellow;
+							}
+						}
+
+						DIV.serious {
+							background-color: $yellow;
+						}
 					}
 				}
 			}
@@ -250,9 +253,9 @@ H2 {
 					padding: 0 5%;
 				}
 
-				@media (max-width: 500px) {
+				@media (max-width: 450px) {
 					H1 {
-						font-size: 120%;
+						padding: 30px 5%;
 					}
 				}
 			}
@@ -270,38 +273,6 @@ H2 {
 
 				H1 {
 					color: $pink;
-				}
-			}
-
-			// Description tiles
-			.tile {
-				.tile-desc {
-					position: absolute;
-					display: none;
-					top: 0;
-					left: 0;
-
-					H2 {
-						padding-top: 0;
-					}
-					DIV {
-						display: table-cell;
-						vertical-align: middle;
-						padding: 0 10%;
-					}
-				}
-
-				.tile-desc.fun {
-					background-color: rgba(253, 22, 130, 0.9);
-					color: #FFF;
-
-					H2 {
-						color: $yellow;
-					}
-				}
-
-				.tile-desc.serious {
-					background-color: rgba(231, 255, 5, 0.9);
 				}
 			}
 		}

@@ -249,16 +249,6 @@ H2 {
     width: 80%;
     max-width: 800px;
     margin: 30px auto 0 auto; }
-    @media (max-width: 750px) {
-      #portfolio > DIV .wide {
-        display: none; }
-      #portfolio > DIV .narrow > DIV {
-        width: 50%; } }
-    @media (min-width: 750px) {
-      #portfolio > DIV .narrow {
-        display: none; }
-      #portfolio > DIV .wide > DIV {
-        width: 33.3333%; } }
     #portfolio > DIV > DIV {
       display: table-row; }
       #portfolio > DIV > DIV > DIV {
@@ -291,14 +281,27 @@ H2 {
             transform: rotateY(0deg); }
           #portfolio > DIV > DIV > DIV .flipper .back {
             position: absolute;
+            display: table;
+            border-spacing: 0;
             top: 0;
             left: 0;
-            bottom: 0;
-            right: 0;
             -moz-transform: rotateY(-180deg);
             -ms-transform: rotateY(-180deg);
             -webkit-transform: rotateY(-180deg);
             transform: rotateY(-180deg); }
+            #portfolio > DIV > DIV > DIV .flipper .back > DIV {
+              display: table-cell;
+              vertical-align: middle;
+              padding: 0 10%; }
+              #portfolio > DIV > DIV > DIV .flipper .back > DIV H2 {
+                padding-top: 0; }
+            #portfolio > DIV > DIV > DIV .flipper .back DIV.fun {
+              background-color: #fd1682;
+              color: #FFF; }
+              #portfolio > DIV > DIV > DIV .flipper .back DIV.fun H2 {
+                color: #e7ff05; }
+            #portfolio > DIV > DIV > DIV .flipper .back DIV.serious {
+              background-color: #e7ff05; }
       #portfolio > DIV > DIV > DIV.flipped .flipper {
         -moz-transform: rotateY(180deg);
         -ms-transform: rotateY(180deg);
@@ -310,9 +313,9 @@ H2 {
         #portfolio > DIV > DIV .text-tile H1 {
           color: #FFF;
           padding: 0 5%; }
-        @media (max-width: 500px) {
+        @media (max-width: 450px) {
           #portfolio > DIV > DIV .text-tile H1 {
-            font-size: 120%; } }
+            padding: 30px 5%; } }
       #portfolio > DIV > DIV .text-tile.fun {
         background-color: #fd1682; }
         #portfolio > DIV > DIV .text-tile.fun H1 {
@@ -321,24 +324,6 @@ H2 {
         background-color: #e7ff05; }
         #portfolio > DIV > DIV .text-tile.serious H1 {
           color: #fd1682; }
-      #portfolio > DIV > DIV .tile .tile-desc {
-        position: absolute;
-        display: none;
-        top: 0;
-        left: 0; }
-        #portfolio > DIV > DIV .tile .tile-desc H2 {
-          padding-top: 0; }
-        #portfolio > DIV > DIV .tile .tile-desc DIV {
-          display: table-cell;
-          vertical-align: middle;
-          padding: 0 10%; }
-      #portfolio > DIV > DIV .tile .tile-desc.fun {
-        background-color: rgba(253, 22, 130, 0.9);
-        color: #FFF; }
-        #portfolio > DIV > DIV .tile .tile-desc.fun H2 {
-          color: #e7ff05; }
-      #portfolio > DIV > DIV .tile .tile-desc.serious {
-        background-color: rgba(231, 255, 5, 0.9); }
 
 #experience H2 {
   color: #000; }
