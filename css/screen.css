@@ -245,7 +245,6 @@ H2 {
   margin-bottom: 30px; }
   #portfolio > DIV {
     display: table;
-    border-spacing: 5px;
     width: 80%;
     max-width: 800px;
     margin: 30px auto 0 auto; }
