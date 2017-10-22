@@ -386,3 +386,13 @@ H2 {
       #experience .logos DIV IMG {
         max-width: 120px;
         max-height: 90px; } }
+
+#publications .publication-list {
+  margin-bottom: 20px; }
+  #publications .publication-list .publication {
+    padding-top: 25px; }
+    #publications .publication-list .publication STRONG {
+      font-weight: 600;
+      color: #fd1682; }
+    #publications .publication-list .publication EM {
+      font-style: italic; }

@@ -401,4 +401,22 @@ H2 {
 	}
 }
 
+#publications {
 
+	.publication-list {
+		margin-bottom: 20px;
+
+		.publication {
+			padding-top: 25px;
+
+			STRONG {
+				font-weight: 600;
+				color: $pink;
+			}
+
+			EM {
+				font-style: italic;
+			}
+		}
+	}
+}
